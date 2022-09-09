@@ -18,5 +18,10 @@ public class PassengerService {
 
     public Optional<Passenger> getPassengerById (Long id){
         return passengerRepository.findById(id);}
+
+    public Passenger savePassenger(Passenger passenger) {
+        passengerRepository.save(passenger);
+        return passenger;
     }
+}
 
